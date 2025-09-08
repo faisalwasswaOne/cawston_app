@@ -15,8 +15,8 @@ def main():
         layout="wide",
         initial_sidebar_state="auto",
         menu_items={
-            'Get Help': 'mailto:clerk@cawston-pc.org.uk',
-            'Report a bug': 'mailto:clerk@cawston-pc.org.uk',
+            'Get Help': 'mailto:clerk@cawstonpc.org',
+            'Report a bug': 'mailto:clerk@cawstonpc.org',
             'About': """
             # Cawston Parish Council Financial Dashboard
             
@@ -128,9 +128,9 @@ def _show_public_footer():
         st.markdown("**Quick Links:**")
         st.markdown(
             """
-            - [Parish Council Website](https://cawston-pc.org.uk)
-            - [Meeting Minutes](https://cawston-pc.org.uk/minutes)
-            - [Contact Information](https://cawston-pc.org.uk/contact)
+            - [Parish Council Website](https://cawstonparishcouncil.gov.uk/)
+            - [Meeting Minutes](https://cawstonparishcouncil.gov.uk/parish-council/minutes-to-council-meetings)
+            - [Contact Information](https://cawstonparishcouncil.gov.uk/contact)
             """
         )
     
