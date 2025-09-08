@@ -10,8 +10,14 @@ class Authentication:
     
     def __init__(self):
         # Default admin password - should be changed via environment variable
-        self.admin_password = os.getenv('DASHBOARD_ADMIN_PASSWORD', 'admin_password')
-        self.session_timeout_minutes = 30
+        # self.admin_password = os.getenv('DASHBOARD_ADMIN_PASSWORD', 'admin_password')
+        # self.session_timeout_minutes = 30
+
+        # Load configuration from our config system (supports Streamlit secrets)
+        from config.settings import get_config
+        config = get_config()
+        self.admin_password = config.admin_password
+        self.session_timeout_minutes = config.session_timeout_minutes
         
     def hash_password(self, password: str) -> str:
         """Create a hash of the password for secure comparison."""
