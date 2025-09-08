@@ -207,7 +207,7 @@ def _check_environment():
     warnings = []
     
     # Check if admin password is default
-    default_password = 'cawston2024!'
+    default_password = 'admin_password'
     current_password = os.getenv('DASHBOARD_ADMIN_PASSWORD', default_password)
     
     if current_password == default_password:
